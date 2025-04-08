@@ -1,11 +1,11 @@
 const BASE_URL = process.env.REACT_APP_API_URL;
-const API_URL = process.env.REACT_APP_API_URL;
+//const API_URL = process.env.REACT_APP_API_URL;
 
 
 
 // 게시글 목록 가져오기
 export async function getPosts() {
-    const res = await fetch(`${API_URL}/posts`);
+    const res = await fetch(`${BASE_URL}/posts`);
     if (!res.ok) throw new Error("게시글 목록 불러오기 실패");
     return res.json();
 }
